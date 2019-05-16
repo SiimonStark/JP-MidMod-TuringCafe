@@ -1,0 +1,20 @@
+.ReservCard {
+  background-color: white;
+  border: 5px teal solid;
+  border-radius: 20px;
+  width: 250px;
+  height: 200px;
+  color: teal;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.cancel {
+  background-color: teal;
+  border: none;
+  color: white;
+  height: 30px;
+  width: 150px;
+}

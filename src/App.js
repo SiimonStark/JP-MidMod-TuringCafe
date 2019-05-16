@@ -20,11 +20,30 @@ class App extends Component {
   }
 
   addResy =(res)=>{
-    console.log('AppGot: ', res)
+    let url = 'http://localhost:3001/api/v1/reservations';
+    let data = {
+      name: res.name,
+      date: res.date,
+      time: res.time,
+      number: parseInt(res.number),
+      id: Date.now()
+    }
+    let init = {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    let currState = this.state.reservations;
+
+    fetch(url, init)
+      .then(response=> response.json())
+      .then(result=> currState.push(result))
+      .then(currState=> this.setState({currState}))
   }
 
   render() {
-    console.log('AppState', this.state)
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
