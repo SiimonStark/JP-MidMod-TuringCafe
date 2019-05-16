@@ -1,0 +1,17 @@
+form {
+  padding-bottom: 20px;
+  width: 100vw;
+}
+
+form input {
+  margin: 0 2%;
+  padding: 5px;
+  height: 20px;
+}
+
+.submit {
+  background-color: teal;
+  color: white;
+  width: 150px;
+  height: 35px;
+}

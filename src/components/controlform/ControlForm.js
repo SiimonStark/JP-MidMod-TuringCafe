@@ -54,7 +54,10 @@ class ControlForm extends Component {
           value={this.state.number}
           required={true}
           type="number" />
-        <input type="submit" value="Make Reservation" />
+        <input 
+          className="submit"
+          type="submit" 
+          value="Make Reservation" />
       </form>
     )
   }
