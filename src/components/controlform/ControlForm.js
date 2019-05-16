@@ -24,7 +24,6 @@ class ControlForm extends Component {
   }
 
   render() {
-    console.log('FormState: ', this.state)
     return (
       <form onSubmit={this.handleSubmit}>
         <input 
@@ -32,24 +31,28 @@ class ControlForm extends Component {
           placeholder="Name"
           onChange={this.handleChange}
           value={this.state.name}
+          required={true}
           type="text" />
         <input 
           name="date"
           placeholder="Date (mm/dd)"
           onChange={this.handleChange}
           value={this.state.date}
+          required={true}
           type="text" />
         <input 
           name="time"
           placeholder="Time hh:mm am/pm"
           onChange={this.handleChange}
           value={this.state.time}
+          required={true}
           type="text" />
         <input 
           name="number"
           placeholder="Number of guests"
           onChange={this.handleChange}
           value={this.state.number}
+          required={true}
           type="number" />
         <input type="submit" value="Make Reservation" />
       </form>

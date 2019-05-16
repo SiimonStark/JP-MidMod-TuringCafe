@@ -6,7 +6,7 @@ const CardContainer =(props)=>{
   let resyMap = props.resy.map(res=> 
     <ResesrvCard {...res} key={res.id} />)
   return (
-    <main className="">
+    <main className="CardContainer">
       {resyMap}
     </main>
   )
